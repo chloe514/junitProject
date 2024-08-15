@@ -109,7 +109,7 @@ public class BookServiceTest {
     @Test
     public void testPurchaseBookExistsInDatabase() {
         Book book3 = new Book("The Cat in the Hat", "Dr. Seuss", "Fiction", 20.95);
-        User user = new User("darranda", "Password123", "d@email.com");
+        User user = new User("testUser", "Password123", "testuser@email.com");
 
         when(bookDatabase.contains(book3)).thenReturn(true);
 
@@ -121,7 +121,7 @@ public class BookServiceTest {
     @Test
     public void testPurchaseBookDoesNotExistInDatabase() {
         Book book3 = new Book("The Cat in the Hat", "Dr. Seuss", "Fiction", 20.95);
-        User user = new User("darranda", "Password123", "d@email.com");
+        User user = new User("testUser", "Password123", "testuser@email.com");
 
         when(bookDatabase.contains(book3)).thenReturn(false);
 
@@ -133,7 +133,7 @@ public class BookServiceTest {
     @Test
     public void testPurchaseBookInsufficientBalance() {
         Book book3 = new Book("The Cat in the Hat", "Dr. Seuss", "Fiction", 20.95);
-        User user = new User("darranda", "Password123", "d@email.com");
+        User user = new User("testUser", "Password123", "testuser@email.com");
 
         when(bookDatabase.contains(book3)).thenReturn(false);
 
@@ -240,6 +240,7 @@ public class BookServiceTest {
     public void tearDown() {
     }
 }
+
 
 
 
